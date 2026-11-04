@@ -1,0 +1,47 @@
+
+# CMake
+build/
+build-*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+_deps/
+
+# Compiled files
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+
+# Google Test / Google Mock
+gtest_build/
+gmock_build/
+Testing/
+*.xml
+
+# IDEs
+.vscode/
+.idea/
+.vs/
+
+# Coverage
+coverage/
+*.gcda
+*.gcno
+*.profraw
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
