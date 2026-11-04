@@ -51,9 +51,9 @@ jobs:
           mingw32-make --version
 
       # Step 4: Configure CMake
-      - name: Configure project
+      - name: Configure Release Build
         run: |
-          cmake -S . -B build -G "MinGW Makefiles" -DBUILD_TESTING=ON
+          cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
 
       # Step 5: Compile application and test executable
       - name: Build project
@@ -64,3 +64,12 @@ jobs:
       - name: Run unit tests
         run: |
           ctest --test-dir build --output-on-failure
+
+      # Upload the compiled application
+      - name: Upload Student Application
+        uses: actions/upload-artifact@v4
+        with:
+          name: StudentManagementSystem-Windows
+          path: build/StudentApp.exe
+          if-no-files-found: error
+          retention-days: 7
