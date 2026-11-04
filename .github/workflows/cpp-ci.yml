@@ -58,7 +58,7 @@ jobs:
       # Step 5: Compile application and test executable
       - name: Build project
         run: |
-          cmake --build build --parallel
+          cmake --build buil --parallel
 
       # Step 6: Execute GoogleTest cases through CTest
       - name: Run unit tests
