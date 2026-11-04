@@ -4,11 +4,11 @@ name: C++ Student Management System CI
 on:
   push:
     branches:
-      - master
+      - main
 
   pull_request:
     branches:
-      - master
+      - main
 
   # Allows us to run the pipeline manually
   workflow_dispatch:
